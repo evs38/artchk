@@ -1,0 +1,470 @@
+; #########################################################
+; # standard resource file for artchk.pl (mod.) V 1.2.01k #
+; #########################################################
+;
+;
+;
+; header / introduction(s)
+; ########################
+; --> you may _not_ delete one of those
+; --> you may _not_ use variables
+;
+;
+[head]
+;
+Path: your.do.main!checkbot
+From: Your-Domain Article Checker <checkbot@your.do.main.invalid>
+Sender: <checkbot-owner@your.do.main.invalid>
+Reply-To: <checkbot-owner@your.do.main.invalid>
+X-No-Archive: yes
+;
+[header]
+;
+- ignore - no reply - ignore - no reply - ignore - no reply - ignore -
+
+Dies ist ein automatisch generierter Antwortartikel. Er wurde von dem
+Programm "Article Checker" in der Annahme gepostet, daß der Autor des
+Originalartikels eine formale Überprüfung seines Artikels wünscht und
+deshalb das Wort "check" in irgendeiner Form im Subject angegeben hat.
+
+;
+[header-auto]
+;
+- ignore - no reply - ignore - no reply - ignore - no reply - ignore -
+
+Dies ist ein automatisch generierter Antwortartikel. Er  wurde  von  dem
+Programm "Article Checker" gepostet, um auf  denkbare  formale  Probleme
+des Originalartikels hinzuweisen.
+
+Das Wort "ignore" im Subject oder der ersten  Zeile  des  Bodies  unter-
+drückt diese automatische Antwort.
+
+;
+[header-forced]
+;
+- ignore - no reply - ignore - no reply - ignore - no reply - ignore -
+
+Dieser  Antwortartikel  enthält  eine  Bewertung   des   vorangegangenen
+Postings durch das Programm "Article Checker" im Hinblick  auf  mögliche
+formale Unkorrektheiten.
+
+;
+[nr]
+;
+
+Bei Fragen zur Bedienung Deines Newsreaders  wende  Dich  bitte  an  die
+passende Newsgruppe in de.comm.software.*
+
+Vorher  lies  aber  bitte  die  Handbücher,  FAQs  und  die   Texte   in
+news:de.newusers.infos bzw. im Web unter <http://www.kirchwitz.de/dni/>
+;
+[footer]
+;
+Viel Spaß noch im Usenet!
+;
+[allok]
+;
+
+   Ich konnte keine formalen Fehler in Deinem Artikel finden.
+   Allerdings bin auch ich nicht perfekt.  ;-)
+;
+[debug]
+;
+
+Auf Wunsch - Schlüsselwort "check verbose" im Subject - folgt hier
+der das geprüfte Posting betreffende Auszug aus dem Logfile:
+
+;
+[intro]
+;
+
+Folgendes ist mir an Deinem Artikel aufgefallen:
+;
+[violation]
+;
+In Deinem Artikel glaube ich Verstöße gegen  technische  Standards  über
+das Format von Usenet-Nachrichten festgestellt zu haben; diese sind  mit
+einem Stern ("*") gekennzeichnet. Andere Hinweise  werden  zur  besseren
+Unterscheidung mit einem Spiegelstrich ("-") eingeleitet.
+;
+;
+;
+; parts where you may _not_ use variables
+; #######################################
+; --> you _may_ delete one of those
+; --> you may _not_ use variables
+;
+;
+[duplicate]
+;
+In Deinem Posting kommen ein oder mehrere Header (Kopfzeilen)
+mehrfach vor; das ist vermutlich unbeabsichtigt. - Es handelt
+sich dabei um
+;
+[umlauts]
+;
+  Weitere Informationen zu Umlauten, Textkodierungen und
+  Zeichensatzdeklarationen findest Du unter:
+  <http://www.westfalen.de/paefken/de.newusers/umlaute-faq.txt>
+;
+[newscis]
+;
+Als Nutzer des kostenlosen Newsservers von individual.de|.net
+sind für Dich vielleicht auch die Konfigurationsbeispiele unter
+
+   <http://www.individual.de/config.html> (deutsch)
+   <http://www.individual.net/config.html> (englisch)
+
+hilfreich.
+;
+;
+;
+; generic parts
+; #############
+; --> you _may_ delete one of those
+; --> you _may_ use variables; those include:
+;     - all headers (%header, e.g. $header{'from'})
+;     - all headers after decoding (%header_decoded, e.g. $header_decoded{'from'})
+;     - local part of "From:" ($frlocpart)
+;     - domain part of "From:" ($frdompart)
+;     - local part of "Reply-To:" ($rplocpart)
+;     - domain part of "Reply-To:" ($rpdompart)
+;     - wrong sig delimiter ($wrongsig)
+;
+;
+[multipart]
+;
+- Du  hast  Deinen  Artikel  als  mehrteiliges  Posting  im  MIME-Format
+  verschickt (MIME-multipart). Das ist im allgemeinen ein Zeichen dafür,
+  daß an den Textteil Deines Postings noch etwas angehängt wird: sei  es
+  eine Wiederholung des Textes in einem anderen Format, bspw.  in  HTML,
+  sei es eine "Visitenkarte", sei es eine  digitale  Signatur  oder  gar
+  eine Datei.
+
+  Solche mehrteiligen Nachrichten sind generell eher unbeliebt  oder  in
+  Diskussionsgruppen gar unzulässig; Du solltest  Deinen  Newsreader  so
+  konfigurieren, daß er  Nachrichten  ausschließlich  einteilig  und  im
+  Klartext ("text/plain") abliefert.
+;
+[html]
+;
+- Anscheinend hast Du Deinen Artikel in HTML gepostet. Im Usenet ist die
+  Verwendung von  HTML  sehr  ungern  gesehen,  da  der  Umfang  dadurch
+  vervielfacht wird, ohne deutlich mehr  Informationen  zu  transportie-
+  ren. Außerdem können die meisten Newsreader kein HTML  interpretieren.
+  Um unnötigen Ärger zu vermeiden, solltest Du dies abstellen und Deinen
+  Newsreader  so  konfigurieren,  daß  er   Nachrichten   ausschließlich
+  einteilig und im Klartext ("text/plain") abliefert.
+;
+[vcard]
+;
+- An Deinem Artikel scheint eine (Visitenkarte) VCARD angehängt zu sein.
+  Im Usenet ist die Verwendung von VCARDs sehr ungern  gesehen,  da  sie
+  nur für wenige Leute  lesbar  bzw.  interessant  sind  und  sie  dafür
+  vergleichsweise viel Platz verbrauchen.
+
+  Die enthaltenen Informationen stehen entweder ohnehin im  Header  (den
+  "Kopfzeilen") Deines Beitrags, oder Du kannst Sie in  Deiner  Signatur
+  unterbringen.
+;
+[nocharset]
+;
+* Du verwendest Nicht-ASCII-Zeichen (z.B. Umlaute) in Deinem Artikel,
+  aber im Header fehlt die Deklaration des Zeichensatzes oder Du
+  verwendest als Zeichensatz "US-ASCII" (was keine Umlaute enthält).
+  Leser, die einen anderen Default-Zeichensatz auf ihrem Rechner
+  eingestellt haben, sehen deshalb anstelle der Umlaute nur
+  Schmierzeichen.
+
+  Eine gültige Deklaration sieht so aus:
+  Content-Type: text/plain; charset=iso-8859-1
+;
+[nocontenttransferenc]
+;
+* Du verwendest Nicht-ASCII-Zeichen (z.B. Umlaute), deklarierst aber
+  keine Kodierung.
+
+  Eine gültige Deklaration sieht so aus:
+  Content-Transfer-Encoding: 8bit
+;
+[base64]
+;
+- Du verwendest als (Umlaut-)Kodierung  für  den  Text  Deines  Postings
+  "Base64". Das ist generell _nicht_ zu empfehlen,  da  diese  Kodierung
+  für binäre Dateien vorgesehen und den Umfang Deines  Postings  um  ca.
+  ein Drittel vergrößert. Außerdem ist sie mit  bloßem  Auge  gar  nicht
+  mehr zu entziffern,  so  daß  Deine  Beiträge  für  Teilnehmer,  deren
+  Programme "Base64" nicht dekodieren können, gar nicht mehr lesbar ist.
+
+  Du solltest Deine Textkodierung daher auf
+
+       Content-Transfer-Encoding: 8bit
+
+  abändern.
+;
+[nomid]
+;
+* Deine Message-ID scheint nicht in Ordnung zu sein.
+  
+  Du verwendest: $header{'message-id'}
+
+  Eine Message-ID dient der eindeutigen  Identifikation  eines  Postings
+  und damit auch der Verhinderung  von  Duplikaten.  Sie  muß  die  Form
+  <eindeutiger_Teil>@<FQDN> haben. Dabei steht <FQDN> für einen komplet-
+  ten  Domainnamen,  der  dem  Erzeuger  der  Message-ID   zur   Nutzung
+  zugewiesen sein muß (also Dir, wenn Du selbst IDs für  Deine  Postings
+  erzeugen möchtest).  Eine  IP-Nummer  ist  an  dieser  Stelle  _nicht_
+  zulässig.
+
+  Für  nähere  Informationen   dazu   vergleiche   die   Message-ID-FAQ:
+  <http://www.hanau.net/usenet/faq/messageid.php>
+;
+[longlines]
+;
+- Kürze bitte Deine Zeilenlänge auf  etwa  72  Zeichen.  Dies  wird  als
+  höflich  angesehen,  da  nicht  alle  Newsreader  Zeilen   automatisch
+  umbrechen  bzw.  ein  automatischer   Zeilenumbruch   generell   nicht
+  vorgesehen ist. Du ermöglichst es auf diese Weise,  Deinen  Text  noch
+  mehrfach zu zitieren und  trotz  eingefügter  Zitatzeichen  unter  der
+  "magischen Grenze" von 80 Zeichen pro Zeile zu bleiben.
+
+  Abgesehen davon lassen sich kürzere Zeilen deutlich besser lesen; auch
+  Zeitungen drucken zum Beispiel nicht grundlos in Spalten.
+;
+[longlinesig]
+;
+- Auch in der Signatur sollten Deine Zeilen nicht länger als maximal  80
+  Zeichen sein. Das entspricht einer üblichen Grenze für den  Text-modus
+  und wird als  höflich  angesehen,  da  nicht  alle  Newsreader  Zeilen
+  automatisch umbrechen.
+;
+[8bitheader]
+;
+* Im Header (den "Kopfzeilen") Deines Artikels  sind  unkodierte  8-Bit-
+  Zeichen (also  Umlaute  und/oder  Sonderzeichen)  vorhanden.  Das  ist
+  unzulässig und kann dazu führen, daß dein Artikel von einigen Systemen
+  nicht befördert wird oder auf einigen Systemen nicht darstellbar  ist.
+  8-bit-Zeichen sind im Header  grundsätzlich  durch  Umschreibungen  zu
+  ersetzen, was vermutlich Dein  Newsreader  für  Dich  erledigen  kann.
+
+  Anderenfalls mußt Du  auf  Umlaute  etc.  im  Header  verzichten;  das
+  betrifft  sowohl  Subject: ("Betreff") wie  auch From: (Absenderangabe)
+  und alle anderen Headerzeilen.
+;
+[reply-to]
+;
+* Dein Reply-To:-Header
+       "$header_decoded{'reply-to'}"
+  scheint  syntaktisch  unkorrekt  bzw.  ungültig  zu  sein.  Vermutlich
+  entspricht der sog. "localpart" der Mailadresse (also der  Teil  links
+  vom "@") nicht den technischen Vorgaben. Häufig liegt das  daran,  daß
+  ein Punkt am  Ende  von  "localpart"  nicht  erlaubt  ist  und  Punkte
+  innerhalb eines angegebenen Namens nur dann zulässig  sind,  wenn  der
+  Name in Anführungszeichen steht.
+;
+[reply-to-domain]
+;
+* Die  Mailadresse  in  Deinem  Reply-To:-Header   ist   ungültig:   die
+  angegebene Domain
+       "$rpdompart"
+  existiert nicht oder nimmt jedenfalls keine Mail entgegen.
+;
+[reply-to-roles]
+;
+- Du verwendest
+       "$rplocpart"
+  als Teil Deiner Mail-Adresse im Reply-To:.
+
+  Dieser Begriff ist aber entweder ein sog. "Role-Account",  d.h.  nicht
+  zur  Verwendung  durch  einzelne  Personen,  sondern   für   bestimmte
+  Funktionen vorgesehen, oder aus sonstigen Gründen unüblich.
+
+  Es wäre daher ratsam, eine andere Mailadresse zu verwenden.
+;
+[replytofrom]
+;
+- Der Reply-To:-Header ist nur nötig, wenn darin  eine  andere  Addresse
+  als im From:-Header angegeben wird.
+;
+[sigdelimiter]
+;
+- Dein Signatur-Abtrenner  scheint nicht  dem  üblichen  Standard  "-- "
+  (Minus, Minus, Leerzeichen,  ohne  die  Anführungszeichen,  auf  einer
+  eigenen Zeile) zu entsprechen.
+
+  Vielmehr sieht er so aus: "$wrongsig"
+;
+[date]
+;
+* Dein Date:-Header scheint unkorrekt zu sein.
+
+  Du verwendest:  $header{'date'}
+
+  Korrekt wäre bspw.:  Wed, 12 Apr 2000 12:12:12
+  mit einer vierstelligen Angabe der Jahreszahl.
+;
+[from]
+;
+* Dein  From:-Header  entspricht   nicht   den   technischen   Vorgaben;
+  vermutlich enthält er nicht zulässige Zeichen.
+
+  Du verwendest:  $header_decoded{'from'}
+
+  Korrekt wäre :  Realname <localpart@do.main>
+          oder :  <localpart@do.main>
+          oder :  localpart@do.main (Realname)
+          oder :  localpart@do.main
+
+  Dabei müssen "Realname", "localpart" und "do.main" jeweils  bestimmten
+  Voraussetzungen  insbesondere  hinsichtlich  der   erlaubten   Zeichen
+  genügen. Insbesondere ist ein Punkt  am  Ende  von  "localpart"  nicht
+  erlaubt; und Punkte innerhalb von "Realname" sind nur  dann  zulässig,
+  wenn "Realname" in Anführungszeichen steht.
+;
+[from-domain]
+;
+* Die Mailadresse in Deinem From:-Header ist  ungültig:  die  angegebene
+  Domain
+       "$frdompart"
+  existiert nicht oder nimmt jedenfalls keine Mail entgegen.
+;
+[from-roles]
+;
+- Du verwendest
+       "$frlocpart"
+  als Teil Deiner Mail-Adresse im From:.
+
+  Dieser Begriff ist aber entweder ein sog. "Role-Account",  d.h.  nicht
+  zur  Verwendung  durch  einzelne  Personen,  sondern   für   bestimmte
+  Funktionen vorgesehen, oder aus sonstigen Gründen unüblich.
+
+  Es wäre daher ratsam, eine andere Mailadresse zu verwenden.
+;
+[noname]
+;
+- In Deinen From:-Header, also  die  Absenderangabe,  solltest  Du  noch
+  Deinen vollen Namen eintragen.
+
+  Dieser sollte die Form 
+       Vorname 'Pseudonym' Nachname
+  haben.
+;
+[longsig]
+;
+- Deine Signatur ist anscheinend länger als die  üblichen  vier  Zeilen.
+  Dies wird von vielen als unhöflich angesehen und führt immer wieder zu
+  Streit. Du solltest sie entsprechend kürzen.
+;
+;
+;
+;
+; faqs for some readers
+; #####################
+; --> you _may_ delete one of those
+; --> you _may_ use variables
+;
+;
+[nr-known]
+;
+Hinweise und Tips speziell zu Deinem Newsreader findest Du in der FAQ unter
+   <http://www.thomas-huehn.de/usenet/newsreaderFAQ.txt>
+und auch unter
+;
+[oe]
+;
+   <http://oe-faq.de/> (deutsch)
+;
+[moz]
+;
+   <http://www.holgermetzger.de/faqmailnews.html> (dt.)
+   <http://home.t-online.de/home/Peter.Dobler/netscape.htm> (dt.)
+;
+[agent]
+;
+   <http://www.netandmore.de/faq/forte/> (dt.)
+   <http://www.soscha.de/faq/dcsfa-faq.txt>
+   <http://www.westfalen.de/paefken/forteagent/> (dt., veraltet)
+   <http://www.vibe.at/begriffe/ags-kurs.html> (dt.)
+;
+[xnews]
+;
+   <http://www.hreimers.de/Xnews/> (dt.)
+   <http://www.x501.de/xnews/faq.htm> (dt.)
+;
+[gnus]
+;
+   <http://linux01.gwdg.de/~steufel/enter.html> (dt.)
+   <http://www.ccs.neu.edu/software/contrib/gnus/> (engl.)
+   <http://www.gnus.org/manual.html> (engl.)
+
+;
+[macsoup]
+;
+   <http://www.snafu.de/~stk/macsoup/> (engl.)
+   <http://www.snafu.de/~stk/macsoup/resedit_hacks.html> (engl.)
+;
+[slrn]
+;
+   <http://www.slrn.org/> (engl.)
+;
+[trn]
+;
+   <http://www.OCF.Berkeley.EDU/help/usenet/trnint-3.3.html> (engl.)
+;
+;
+;
+;
+;
+; special parts for some problems with some readers
+; #################################################
+; --> will be printed AFTER the generic part (see above)
+; --> consists of the name of the generic part and the name of the reader:
+;     "[nomid-moz]" -> "[nomid]" + "[moz]"
+; --> you may add new ones by putting together the name of one of the generic
+;     parts (see above) and one of the readers (see above)
+; --> you _may_ delete one of those
+; --> you _may_ use variables
+;
+;
+[nomid-moz]
+;
+  In Deinem Fall liegt das Problem vermutlich in Deinem Newsreader,  der
+  von  Haus  aus  Message-IDs  fälschlicherweise  mit  der  Domain   der
+  Mailadresse generiert. Abhilfe schafft  es,  an  die  Mailadresse  ein
+  Leerzeichen anzuhängen; bitte wirf dazu auch einen Blick in die FAQs!
+
+  Solltest Du über  die  Domain  in  Deiner  Mailadresse  frei  verfügen
+  können, weil Du sie selbst registriert hast, kannst Du diesen  Hinweis
+  allerdings ignorieren.
+;
+[8bitheader-agent]
+;
+  Wenn Du über die Vollversion des Forté Agent verfügst, kannst  Du  das
+  abstellen, indem Du unter "Options  |  General  Preferences"  auf  dem
+  Reiter "Languages" rechts unten die  beiden  Kästchen  "MIME  headers"
+  ankreuzt.
+
+  Die kostenlose "Schnupperversion" Forté Free Agent kann  mit  Umlauten
+  gar nicht umgehen und ist daher für den Dauerbetrieb wenig geeignet.
+;
+[8bitheader-oe]
+;
+  Da Du offenbar Outlook Express nutzt,  solltest  Du  unter  "Extras  |
+  Optionen  |  Senden  |  Einstellungen"  den  Punkt  "8-bit-Zeichen  in
+  Kopfdaten zulassen" deaktivieren. Das mußt Du  jeweils  für  Mail  und
+  News getrennt  tun  -  in  beiden  Fällen  sind  8bit-Zeichen  nämlich
+  technisch unzulässig.
+;
+[sigdelimiter-oe]
+;
+  Das liegt vermutlich daran,  daß  Dein  Newsreader  das  abschließende
+  Leerzeichen vor dem Versand wieder löscht.
+;
+[sigdelimiter-moz]
+;
+  Vermutlich nutzt Du  den  HTML-Editor  für  Deine  Postings.  Versuche
+  einmal, ihn mit Edit -> Preferences -> Mail & Newsgroups -> Formatting
+  ->  Message  Formatting  ->  "Use  the  plain   text   editor..."   zu
+  deaktivieren.  Dann  sollte   Dein   Programm   automatisch   korrekte
+  Signaturtrenner setzen.
+;
